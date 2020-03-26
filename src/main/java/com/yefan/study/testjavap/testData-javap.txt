@@ -1,0 +1,193 @@
+Classfile /Users/yefan/IdeaProjects/private_work_space/java-study/src/main/java/com/yefan/study/testjavap/TestDate.class
+  Last modified 2019-11-6; size 1099 bytes
+  MD5 checksum a81559fc515ce7cc33626edd94713da2
+  Compiled from "TestDate.java"
+public class com.yefan.study.testjavap.TestDate
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:  //常量池
+   #1 = Methodref          #18.#34        // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#35         // com/yefan/study/testjavap/TestDate.count:I
+   #3 = Class              #36            // com/yefan/study/testjavap/TestDate
+   #4 = Methodref          #3.#34         // com/yefan/study/testjavap/TestDate."<init>":()V
+   #5 = Methodref          #3.#37         // com/yefan/study/testjavap/TestDate.test1:()V
+   #6 = Class              #38            // java/util/Date
+   #7 = Methodref          #6.#34         // java/util/Date."<init>":()V
+   #8 = String             #39            // wangerbei
+   #9 = Methodref          #3.#40         // com/yefan/study/testjavap/TestDate.test2:(Ljava/util/Date;Ljava/lang/String;)V
+  #10 = Fieldref           #41.#42        // java/lang/System.out:Ljava/io/PrintStream;
+  #11 = Class              #43            // java/lang/StringBuilder
+  #12 = Methodref          #11.#34        // java/lang/StringBuilder."<init>":()V
+  #13 = Methodref          #11.#44        // java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #14 = Methodref          #11.#45        // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #15 = Methodref          #11.#46        // java/lang/StringBuilder.toString:()Ljava/lang/String;
+  #16 = Methodref          #47.#48        // java/io/PrintStream.println:(Ljava/lang/String;)V
+  #17 = String             #49            // zhangsan
+  #18 = Class              #50            // java/lang/Object
+  #19 = Utf8               count
+  #20 = Utf8               I
+  #21 = Utf8               <init>
+  #22 = Utf8               ()V
+  #23 = Utf8               Code
+  #24 = Utf8               LineNumberTable
+  #25 = Utf8               main
+  #26 = Utf8               ([Ljava/lang/String;)V
+  #27 = Utf8               test1
+  #28 = Utf8               test2
+  #29 = Utf8               (Ljava/util/Date;Ljava/lang/String;)V
+  #30 = Utf8               test3
+  #31 = Utf8               test4
+  #32 = Utf8               SourceFile
+  #33 = Utf8               TestDate.java
+  #34 = NameAndType        #21:#22        // "<init>":()V
+  #35 = NameAndType        #19:#20        // count:I
+  #36 = Utf8               com/yefan/study/testjavap/TestDate
+  #37 = NameAndType        #27:#22        // test1:()V
+  #38 = Utf8               java/util/Date
+  #39 = Utf8               wangerbei
+  #40 = NameAndType        #28:#29        // test2:(Ljava/util/Date;Ljava/lang/String;)V
+  #41 = Class              #51            // java/lang/System
+  #42 = NameAndType        #52:#53        // out:Ljava/io/PrintStream;
+  #43 = Utf8               java/lang/StringBuilder
+  #44 = NameAndType        #54:#55        // append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #45 = NameAndType        #54:#56        // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #46 = NameAndType        #57:#58        // toString:()Ljava/lang/String;
+  #47 = Class              #59            // java/io/PrintStream
+  #48 = NameAndType        #60:#61        // println:(Ljava/lang/String;)V
+  #49 = Utf8               zhangsan
+  #50 = Utf8               java/lang/Object
+  #51 = Utf8               java/lang/System
+  #52 = Utf8               out
+  #53 = Utf8               Ljava/io/PrintStream;
+  #54 = Utf8               append
+  #55 = Utf8               (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #56 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #57 = Utf8               toString
+  #58 = Utf8               ()Ljava/lang/String;
+  #59 = Utf8               java/io/PrintStream
+  #60 = Utf8               println
+  #61 = Utf8               (Ljava/lang/String;)V
+{
+  public com.yefan.study.testjavap.TestDate();  //构造方法
+    descriptor: ()V
+    flags: ACC_PUBLIC  //访问符
+    Code:
+      stack=2, locals=1, args_size=1   //stack 栈深度 locals 局部变量表大小，args 参数数组大小
+         0: aload_0             //从本地变量表中加载索引为0的变量的值，也即this的引用，压入栈
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V 出栈，调用java/lang/Object."<init>":()V 初始化对象，就是this指定的对象的init()方法完成初始化
+         4: aload_0  //加载索引为0的变量的值 this，入栈
+         5: iconst_0 //将常量0压入操作数栈
+         6: putfield      #2                  // Field count:I  将前两步入栈的值(this, 0)取出赋值 this.count = 0
+         9: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 4
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=2, args_size=1
+         0: new           #3                  // class com/yefan/study/testjavap/TestDate
+         3: dup
+         4: invokespecial #4                  // Method "<init>":()V
+         7: astore_1
+         8: aload_1
+         9: invokevirtual #5                  // Method test1:()V
+        12: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 8
+        line 11: 12
+
+  public void test1();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=1
+         0: new           #6                  // class java/util/Date
+         3: dup
+         4: invokespecial #7                  // Method java/util/Date."<init>":()V
+         7: astore_1
+         8: ldc           #8                  // String wangerbei
+        10: astore_2
+        11: aload_0
+        12: aload_1
+        13: aload_2
+        14: invokevirtual #9                  // Method test2:(Ljava/util/Date;Ljava/lang/String;)V
+        17: getstatic     #10                 // Field java/lang/System.out:Ljava/io/PrintStream;
+        20: new           #11                 // class java/lang/StringBuilder
+        23: dup
+        24: invokespecial #12                 // Method java/lang/StringBuilder."<init>":()V
+        27: aload_1
+        28: invokevirtual #13                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+        31: aload_2
+        32: invokevirtual #14                 // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        35: invokevirtual #15                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        38: invokevirtual #16                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+        41: return
+      LineNumberTable:
+        line 14: 0
+        line 15: 8
+        line 16: 11
+        line 17: 17
+        line 18: 41
+
+  public void test2(java.util.Date, java.lang.String);
+    descriptor: (Ljava/util/Date;Ljava/lang/String;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=3, args_size=3
+         0: aconst_null
+         1: astore_1
+         2: ldc           #17                 // String zhangsan
+         4: astore_2
+         5: return
+      LineNumberTable:
+        line 21: 0
+        line 22: 2
+        line 23: 5
+
+  public void test3();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: dup
+         2: getfield      #2                  // Field count:I
+         5: iconst_1
+         6: iadd
+         7: putfield      #2                  // Field count:I
+        10: return
+      LineNumberTable:
+        line 26: 0
+        line 27: 10
+
+  public void test4();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=1
+         0: iconst_0
+         1: istore_1
+         2: iconst_0
+         3: istore_2
+         4: iload_1
+         5: iconst_1
+         6: iadd
+         7: istore_2
+         8: iload_1
+         9: iconst_1
+        10: iadd
+        11: istore_2
+        12: return
+      LineNumberTable:
+        line 30: 0
+        line 32: 2
+        line 33: 4
+        line 35: 8
+        line 36: 12
+}
+SourceFile: "TestDate.java"
