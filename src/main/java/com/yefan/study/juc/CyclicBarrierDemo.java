@@ -20,6 +20,7 @@ public class CyclicBarrierDemo {
     public static void main(String[] args) {
         final Random random = new Random();
         final CyclicBarrier cyclicBarrier = new CyclicBarrier(5, new Runnable() {
+            @Override
             public void run() {
                 System.out.println("大家都到齐就继续执行吧");
             }
