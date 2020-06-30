@@ -1,5 +1,6 @@
 package com.yefan.study;
 
+
 public class StudyTest {
 
     public static void main(String[] args) {
@@ -8,6 +9,7 @@ public class StudyTest {
 
         StaticClassStudy.InnerStaticClass innerStaticClass = new StaticClassStudy.InnerStaticClass();
         innerStaticClass.sayHello();
+
     }
 
 

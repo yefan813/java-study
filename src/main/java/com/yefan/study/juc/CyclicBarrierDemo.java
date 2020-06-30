@@ -19,29 +19,23 @@ public class CyclicBarrierDemo {
 
     public static void main(String[] args) {
         final Random random = new Random();
-        final CyclicBarrier cyclicBarrier = new CyclicBarrier(5, new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("大家都到齐就继续执行吧");
-            }
-        });
+        final CyclicBarrier cyclicBarrier = new CyclicBarrier(5, () -> System.out.println("大家都到齐就继续执行吧"));
+
         for (int i = 0; i < 5; i++) {
-            new Thread(new Runnable() {
-                public void run() {
-                    int step = random.nextInt(5);
-                    System.out.println(Thread.currentThread().getName() + "" +
-                            new Date() + ",sleep " + step + " seconds");
-                    try {
-                        Thread.sleep(step * 1000L);
-                        cyclicBarrier.await();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }catch (BrokenBarrierException e) {
-                        e.printStackTrace();
-                    }
-                    System.out.println(Thread.currentThread().getName() + "" +
-                            new Date() + "run over!");
+            new Thread(() -> {
+                int step = random.nextInt(5);
+                System.out.println(Thread.currentThread().getName() + "" +
+                        new Date() + ",sleep " + step + " seconds");
+                try {
+                    Thread.sleep(step * 1000L);
+                    cyclicBarrier.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }catch (BrokenBarrierException e) {
+                    e.printStackTrace();
                 }
+                System.out.println(Thread.currentThread().getName() + "" +
+                        new Date() + "run over!");
             }).start();
         }
 

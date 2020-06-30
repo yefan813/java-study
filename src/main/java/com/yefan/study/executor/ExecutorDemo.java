@@ -18,16 +18,10 @@ public class ExecutorDemo {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(10, 15, 30,
                 TimeUnit.HOURS, new ArrayBlockingQueue<>(10));
 
-        threadPoolExecutor.execute(new Runnable() {
-            @Override
-            public void run() {
-                System.out.println();
-            }
-        });
+        threadPoolExecutor.execute(() -> System.out.println());
     }
 
     static class MyThreadFactory implements ThreadFactory {
-
         @Override
         public Thread newThread(Runnable r) {
             System.out.println("线程池新建了个线程！！！！");
@@ -41,14 +35,7 @@ public class ExecutorDemo {
         ExecutorService executorService = new ThreadPoolExecutor(1,1,10,TimeUnit.HOURS,
                 new ArrayBlockingQueue<>(10),
                 new MyThreadFactory());
-        Runnable task = new Runnable() {
-            @Override
-            public void run() {
-                System.out.println("hello world");
-                // 抛出异常
-//                throw new RuntimeException();
-            }
-        };
+        Runnable task = () -> System.out.println("hello world");
         executorService.execute(task);
         // 提交任务通过 DefaultThreadFactory.newThread() 创建线程
         TimeUnit.SECONDS.sleep(2);

@@ -15,7 +15,7 @@ public class ThreadPoolDemo {
 
     static class MyThread implements Runnable {
         public void run() {
-
+            System.out.println("test");
         }
     }
 }
